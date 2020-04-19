@@ -7,7 +7,8 @@ export class WebApp {
     constructor() {
         this.server = new WebServer(443);
         this.server.add_response("/", WebServer.SENDFILE, "C:/Users/super/nodeProjects/SampleServer/docs/index.html");
-        this.server.add_response("/test", WebServer.SENDMSG, "<h3>Hello there!</h3>");
+        this.server.add_response("/test", WebServer.SENDMSG, "<h1>Hello there!</h1>");
+        this.server.add_response("*", WebServer.SENDMSG, "<h1>woaaaaaaaaah~! I can't find that page!!!!<h1>");
     }
 
     start() {
